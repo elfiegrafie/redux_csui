@@ -1,0 +1,191 @@
+@import '_normalize.styl';
+@import '_typography.styl';
+@import '_animations.styl';
+
+body
+	background $white
+
+/* post list*/
+.photo-grid
+	display flex
+	flex-wrap wrap
+	max-width 1200px
+	margin 0 auto
+
+/* post in post list*/
+
+.list-post{
+	flex-basis: calc(33.333% - 4rem);
+	flex-grow: 1;
+	flex-shrink: 0;
+	padding: 2rem;
+	color: $textcol;
+	.post-title {
+		font-family: 'Josefin Sans', sans-serif;
+		font-size: 1.6rem;
+		font-weight: 700;
+		text-transform: uppercase;
+		margin-right :10px;
+    }
+	figcaption {
+		position: absolute;
+		top: 0;
+		left: 0;
+		right: 0;
+		padding: 1rem;
+		overflow: hidden;
+		background-color: rgba(255,255,255,0.8);
+		bottom: 40px;
+		transition: opacity 0.3s;
+		opacity: 0;
+		cursor: pointer;
+		&:hover {
+			opacity: 1;
+		}
+	}
+	.control-buttons{
+		display: block;
+	}
+}
+
+.tags-list{
+	.tag{
+		display: inline-block;
+		margin-right: 10px;
+		color: $blue;
+	}
+}
+
+/* image of post */
+.grid-figure
+	margin 0
+	padding 0
+	border 1px solid $lightgray
+	background $white
+	box-shadow 0 0 0 5px rgba(0,0,0,0.03);
+	position relative
+
+.grid-photo-wrap
+	.grid-photo
+		width 100%
+		margin 0
+
+/*modal */
+.skylight-dialog {
+	width: 100% !important;
+	height: 100% !important;
+	position: fixed !important;
+	top: 0 !important;
+	left: 0 !important;
+	margin: 0 !important;
+	background-color: #212121 !important;
+	.grid-photo-wrap {
+		height: 100%;
+		text-align: center;
+		.grid-photo{	
+			width: auto;
+			height: 100%;
+		}
+	}
+	.post-description {
+		position: absolute;
+		bottom: 0;
+		width: 100%;
+		padding: 1rem 10rem;
+		background-color: rgba(0,0,0,0.5);
+		color: #FFF;
+		.post-title {
+			display: inline-block;
+		}
+		.control-buttons{
+			display: inline-block;
+			button {
+				background-color: transparent !important;
+			}
+		}
+		.tag{
+			color: #FFF;
+		}
+	}
+}
+
+.grid-photo-wrap
+	position relative
+
+
+
+/* like hearts */
+.likes-heart
+	background url(http://f.cl.ly/items/3Y373q2Q3J3Y1j203n0m/Bitmap-3.png) center no-repeat
+	background-size contain
+	font-size 2rem
+	padding 1rem
+	position absolute
+	color $blue
+	left 50%
+	top 50%
+	pointer-events none
+
+
+
+
+
+
+
+
+
+
+
+
+/*
+	like Buttons
+*/
+
+.control-buttons
+
+	.like
+		border 0
+		background-color $textcol
+		display block
+		line-height 2
+		text-decoration none
+		padding 5px
+		text-align center
+		font-size 15px
+		color #ffffff
+		transition all 0.2s
+		box-sizing padding-box
+		width 100%
+		&:hover, &:focus
+			background-color darken($blue, 20%)
+			outline 0
+		&.is_liked
+			background-color $blue
+
+
+/*
+	Cowboy style speech bubble - you should probably use an SVG for this if you are doing more icons.
+*/
+.speech-bubble
+	size = 1.25rem
+	width size * 1.2
+	height size 
+	background $blue
+	display inline-block
+	border-radius 50%
+	position relative
+	&:after
+		display inline-block
+		position absolute
+		content ''
+		width: 0;
+		height: 0;
+		border-style: solid;
+		border-width: 0 size size 0
+		border-color: transparent $blue transparent transparent
+		top 30%
+		left 0
+
+	
+	
+
