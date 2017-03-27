@@ -278,7 +278,40 @@ const posts =[
       },
       "totalLikes":0,
       "isLikedByUser":false
-   }
+   },
+   {
+    "id": 2,
+    "title": "Page produit",
+    "client": "Sézane",
+    "body": "page produit orientée branding",
+    "link": "http://www.sezane.com/fr/product/collection-printemps/veste-jodi?cou_Id=1487",
+    "fileId": 2,
+    "postHasTags": [{
+        "id": 1,
+        "name": "Desktop"
+    }, {
+        "id": 5,
+        "name": "Product Page"
+    }, {
+        "id": 24,
+        "name": "Body"
+    }, {
+        "id": 27,
+        "name": "Ecommerce"
+    }, {
+        "id": 29,
+        "name": "Fashion"
+    }, {
+        "id": 38,
+        "name": "FR"
+    }],
+    "associatedFile": {
+        "id": 2,
+        "name": "sezane copie-1490195089603.jpg"
+    },
+    "totalLikes": 0,
+    "isLikedByUser": false
+}
 ];
 
 

@@ -4,7 +4,7 @@
 //
 //
 
-function posts( state = [], action ) {
+function postsReducer( state = [], action ) {
 
 	switch(action.type) {
 		case "INCREMENT_LIKES": {
@@ -32,4 +32,4 @@ function posts( state = [], action ) {
 	return state;
 }
 
-export default posts;
+export default postsReducer;

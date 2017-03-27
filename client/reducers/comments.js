@@ -32,7 +32,7 @@ function postComments( postComment = [], action ) {
 	return postComment;
 }
 
-function comments( state = [], action ) {
+function commentsReducer( state = [], action ) {
 	if (typeof action.postId !== 'undefined') {
 		return {
 			// take the current state
@@ -45,4 +45,4 @@ function comments( state = [], action ) {
 	return state;
 }
 
-export default comments;
+export default commentsReducer;

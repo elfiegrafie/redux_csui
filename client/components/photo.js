@@ -1,5 +1,4 @@
 import React from 'react';
-import { Link } from 'react-router';
 import ReactCSSTransitionGroup from 'react-addons-css-transition-group';
 import SkyLight from 'react-skylight';
 
@@ -20,7 +19,7 @@ const Photo = React.createClass({
 			<div className="list-post">
 				<figure className="grid-figure">
 					<PostImage post={this.props.post} />
-					<Link onClick={() => this.refs.simpleDialog.show()} to={`/view/${this.props.post.code}`}>
+					<div onClick={() => this.refs.simpleDialog.show()} >
 					<figcaption>
 							<p  className="post-title">
 								{this.props.post.title}
@@ -30,11 +29,11 @@ const Photo = React.createClass({
 							{this.props.post.body}
 
 					</figcaption>
-					</Link>
+					</div>
 					<ActionButtons {...this.props} />
 				</figure>
 				<div className="post-infos">
-					<Link to={this.props.post.link}>{this.props.post.link}</Link><br/>
+					<a href={this.props.post.link} target="_blank">{this.props.post.link}</a><br/>
 					<span  className="post-title">
 						{this.props.post.title}
 					</span>
@@ -49,7 +48,7 @@ const Photo = React.createClass({
 						<p  className="post-body">
 							{this.props.post.body}
 						</p>
-						<Link to={this.props.post.link}>{this.props.post.link}</Link><br/>
+						<a href={this.props.post.link} target="_blank">{this.props.post.link}</a><br/>
 						<h4>Tags</h4>
 						<div className="tags-list">{this.props.post.postHasTags.map(this.renderTags )} </div>
 					</div>
