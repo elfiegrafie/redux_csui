@@ -11,7 +11,6 @@ const Main = React.createClass({
 			<div>
 				<Header  />
 				<PhotoGrid  {...this.props} />
-
 			</div>
 		)
 	}

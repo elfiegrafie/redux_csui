@@ -25,6 +25,9 @@ function postsReducer( state = [], action ) {
 			]
 			break;
 		}
+		case "GET_TODO_DATA_RECEIVED": {
+			return action.response.data
+		}
 		default: {
 			return state;
 		}
